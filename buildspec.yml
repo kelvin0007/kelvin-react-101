@@ -16,13 +16,17 @@ phases:
       - echo "Installing dependencies..."
       - npm install
 
-  build:
-    commands:
-      - echo "Building project..."
-      - npm run build
+build:
+  commands:
+    - echo "Building project..."
+    - npm run build
+    - echo "Checking for build directory..."
+    - ls build || echo "Build directory not found!"
+
 
 artifacts:
   files:
     - '**/*'
   discard-paths: no
-  base-directory: build
+  base-directory: dist
+
