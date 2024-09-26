@@ -18,10 +18,11 @@ phases:
 
 build:
   commands:
+    - echo "Creating build directory..."
+    - mkdir -p build
     - echo "Building project..."
     - npm run build
-    - echo "Checking for build directory..."
-    - ls build || echo "Build directory not found!"
+
 
 
 artifacts:
