@@ -18,11 +18,10 @@ phases:
 
 build:
   commands:
-    - echo "Creating build directory..."
-    - mkdir -p build
     - echo "Building project..."
     - npm run build
-
+    - echo "Listing contents of $(pwd)..."
+    - ls -la
 
 
 artifacts:
